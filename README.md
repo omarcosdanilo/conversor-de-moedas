@@ -82,7 +82,7 @@ A arquitetura MSC (Model, Service, Controller) foi utilizada visando as boas pr�
 
 **3. Faça o clone do projeto:**
 ```
-  git clone https://marcosdanilo@bitbucket.org/recrutamento_jya_nodejs/recrutamento-conversor-nodejs-marcosdanilo94_gmail.com.git
+  git clone https://github.com/omarcosdanilo/conversor-de-moedas.git
 ```
 **Obs: esse comando irá criar um novo diretório contendo todos os arquivos da aplicação!**
 
