@@ -1,0 +1,56 @@
+{
+  "name": "recrutamento-conversor-nodejs-marcosdanilo94_gmail.com",
+  "version": "1.0.0",
+  "description": "Voc� dever� implementar uma API Rest que seja capaz de realizar a convers�o entre duas moedas utilizando taxas de convers�es atualizadas de um servi�o externo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register ./src/tests/*/*/*$NAME*.{test,spec}.ts -t 10000 --exit",
+    "dev": "tsnd src/index.ts",
+    "start": "npx -y tsc && node ./build/src",
+    "db:create": "npx tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/recrutamento_jya_nodejs/recrutamento-conversor-nodejs-marcosdanilo94_gmail.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/recrutamento_jya_nodejs/recrutamento-conversor-nodejs-marcosdanilo94_gmail.com/issues"
+  },
+  "homepage": "https://bitbucket.org/recrutamento_jya_nodejs/recrutamento-conversor-nodejs-marcosdanilo94_gmail.com#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^3.0.0-rc.1",
+    "node-fetch": "^2.6.1",
+    "sequelize": "^6.25.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/chai-http": "^4.2.0",
+    "@types/express": "^4.17.14",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.11.9",
+    "@types/node-fetch": "^2.6.2",
+    "@types/sequelize": "^4.28.14",
+    "@types/sinon": "^10.0.13",
+    "@typescript-eslint/eslint-plugin": "5.3.1",
+    "@typescript-eslint/parser": "5.3.1",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^15.0.0",
+    "eslint-plugin-editorconfig": "^3.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-mocha": "^9.0.0",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "mocha": "^10.1.0",
+    "sequelize-cli": "^6.5.2",
+    "sinon": "^14.0.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.4"
+  }
+}
