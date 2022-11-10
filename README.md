@@ -7,14 +7,14 @@
 
 Este projeto foi desenvolvido por [Marcos Danilo](https://www.linkedin.com/in/marcos-danilo/).
 
-A idÈia do projeto era construir uma API onde fosse possÌvel realizar a convers„o entre duas moedas a partir de taxas de convers„o obtidas de um [serviÁo externo](https://apilayer.com/marketplace/exchangerates_data-api).
+A id√©ia do projeto era construir uma API onde fosse poss√≠vel realizar a convers√£o entre duas moedas a partir de taxas de convers√£o obtidas de um [servi√ßo externo](https://apilayer.com/marketplace/exchangerates_data-api).
 
-A arquitetura MSC (Model, Service, Controller) foi utilizada visando as boas pr·ticas e organizaÁ„o do projeto.
+A arquitetura MSC (Model, Service, Controller) foi utilizada visando as boas pr√°ticas e organiza√ß√£o do projeto.
 
 ---
 
 
-## **TÈcnologias usadas**
+## **T√©cnologias usadas**
 
 **Back-end:**
 <ul>
@@ -70,45 +70,53 @@ A arquitetura MSC (Model, Service, Controller) foi utilizada visando as boas pr·
 
 ## **Como rodar o projeto localmente:**
 
-**1. Abra o terminal utlizando ("**ctrl+alt+t**") e crie um diretÛrio no local de sua preferÍncia com o comando **mkdir**, aqui neste exemplo usaremos o nome "**projetos**":**
+**1. Abra o terminal utlizando ("**ctrl+alt+t**") e crie um diret√≥rio no local de sua prefer√™ncia com o comando **mkdir**, aqui neste exemplo usaremos o nome "**projetos**":**
 ```
   mkdir projetos
 ```
 
-**2. Entre no diretÛrio criado:**
+**2. Entre no diret√≥rio criado:**
 ```
   cd projetos
 ```
 
-**3. FaÁa o clone do projeto:**
+**3. Fa√ßa o clone do projeto:**
 ```
   git clone https://marcosdanilo@bitbucket.org/recrutamento_jya_nodejs/recrutamento-conversor-nodejs-marcosdanilo94_gmail.com.git
 ```
-**Obs: esse comando ir· criar um novo diretÛrio contendo todos os arquivos da aplicaÁ„o!**
+**Obs: esse comando ir√° criar um novo diret√≥rio contendo todos os arquivos da aplica√ß√£o!**
 
-**4. Utilize o comando **"ls"** para verificar o nome do diretÛrio criado:**
+**4. Utilize o comando **"ls"** para verificar o nome do diret√≥rio criado:**
 ```
   ls
 ```
 
-**5. Entre no diretÛrio listado, usando o comando abaixo:**
+**5. Entre no diret√≥rio listado, usando o comando abaixo:**
 ```
-  cd "destino do diretÛrio"
+  cd "destino do diret√≥rio"
 ```
-**OBS: Ao digitar as primeiras letras do nome do diretÛrio pressione a tecla "TAB" para autocompletar**
+**OBS: Ao digitar as primeiras letras do nome do diret√≥rio pressione a tecla "TAB" para autocompletar**
 
-**6. FaÁa a instalaÁ„o das dependÍncias:**
+**6. Fa√ßa a instala√ß√£o das depend√™ncias:**
 ```
   npm install
 ```
 
-**6. Inicie os containers da API e do Banco de dados:**
+**7. Gere uma chave no site [api-layer](https://apilayer.com/), para isso basta fazer o cadastro, e crie um arquivo ".env" na raiz do projeto como demonstrado no ".env_example" e cole sua chave gerada:**
+
+```
+API_KEY=chaveGerada
+```
+
+> Esta chave √© para fazer a comunica√ß√£o com o servi√ßo externo que traz as taxas de convers√£o.
+
+**8. Inicie os containers da API e do Banco de dados:**
 ```
   docker-compose up -d
 ```
-**OBS: Caso n„o possua o Docker a instalaÁ„o pode ser feita atravÈs da [documentaÁ„o do Docker](https://www.docker.com/) e [documentaÁ„o do Docker-compose](https://docs.docker.com/compose/install/#install-compose)**
+**OBS: Caso n√£o possua o Docker a instala√ß√£o pode ser feita atrav√©s da [documenta√ß√£o do Docker](https://www.docker.com/) e [documenta√ß√£o do Docker-compose](https://docs.docker.com/compose/install/#install-compose)**
 
-**7. Crie o banco de dados:**
+**9. Crie o banco de dados:**
 ```
   npm run db:create
 ```
@@ -118,9 +126,9 @@ A arquitetura MSC (Model, Service, Controller) foi utilizada visando as boas pr·
 
 ## 1 - Endpoint POST `/exchange`
 
-- O endpoint È acessÌvel atravÈs da URL /exchange;
-- O enpoint È capaz de adicionar uma nova transaÁ„o na tabela exchanges do banco de dados;
-- O corpo da requisiÁ„o dever· seguir o formato abaixo:
+- O endpoint √© acess√≠vel atrav√©s da URL /exchange;
+- O enpoint √© capaz de adicionar uma nova transa√ß√£o na tabela exchanges do banco de dados;
+- O corpo da requisi√ß√£o dever√° seguir o formato abaixo:
 ```json
 {
 	"userId": 1,
@@ -130,7 +138,7 @@ A arquitetura MSC (Model, Service, Controller) foi utilizada visando as boas pr·
 }
 ```
 
-- A resposta da requisiÁ„o ser· no formato abaixo:
+- A resposta da requisi√ß√£o ser√° no formato abaixo:
 ```json
 {
 	"userId": 1,
@@ -148,15 +156,15 @@ A arquitetura MSC (Model, Service, Controller) foi utilizada visando as boas pr·
 
 ## 2 - Endpoint GET `/exchange`
 
-- O endpoint È acessÌvel atravÈs da URL /exchange;
-- O endpoint È capaz de buscar todas as transaÁıes registradas no banco de dados filtradas pelo id do usu·rio;
-- O corpo da requisiÁ„o dever· seguir o formato abaixo:
+- O endpoint √© acess√≠vel atrav√©s da URL /exchange;
+- O endpoint √© capaz de buscar todas as transa√ß√µes registradas no banco de dados filtradas pelo id do usu√°rio;
+- O corpo da requisi√ß√£o dever√° seguir o formato abaixo:
 ```json
 {
 	"userId": 1
 }
 ```
-- A resposta da requisiÁ„o ser· no formato abaixo:
+- A resposta da requisi√ß√£o ser√° no formato abaixo:
 ```json
 [
 	{
@@ -193,7 +201,7 @@ A arquitetura MSC (Model, Service, Controller) foi utilizada visando as boas pr·
 ```
 ---
 
-# Lista de moedas permitidas para convers„o
+# Lista de moedas permitidas para convers√£o
 ```json
 	{
 	"AED": "United Arab Emirates Dirham",
