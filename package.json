@@ -1,7 +1,6 @@
 {
-  "name": "recrutamento-conversor-nodejs-marcosdanilo94_gmail.com",
+  "name": "conversor-de-moedas",
   "version": "1.0.0",
-  "description": "Voc� dever� implementar uma API Rest que seja capaz de realizar a convers�o entre duas moedas utilizando taxas de convers�es atualizadas de um servi�o externo.",
   "main": "index.js",
   "scripts": {
     "test": "mocha -r ts-node/register ./src/tests/*/*/*$NAME*.{test,spec}.ts -t 10000 --exit",
@@ -10,16 +9,15 @@
     "db:create": "npx tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
   "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/recrutamento_jya_nodejs/recrutamento-conversor-nodejs-marcosdanilo94_gmail.com.git"
+    "type": "git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://bitbucket.org/recrutamento_jya_nodejs/recrutamento-conversor-nodejs-marcosdanilo94_gmail.com/issues"
+    "url": ""
   },
-  "homepage": "https://bitbucket.org/recrutamento_jya_nodejs/recrutamento-conversor-nodejs-marcosdanilo94_gmail.com#readme",
+  "homepage": "",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
